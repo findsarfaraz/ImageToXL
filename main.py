@@ -15,10 +15,10 @@ class create_xl(QtGui.QMainWindow,imgtoxl.Ui_MainWindow):
         # super(create_xl,self).__init__()
         super(create_xl, self).__init__()
         self.setupUi(self)
-        self.btn_Open_File.clicked.connect(self.test)
-        self.btn_Save_File.clicked.connect(self.test1)
+        self.btn_Open_File.clicked.connect(self.OpenButton)
+        self.btn_Save_File.clicked.connect(self.SaveButton)
 
-    def test(self):
+    def OpenButton(self):
         global FilePath
         FilePath= QtGui.QFileDialog.getOpenFileName(self, ("Open File"),
                                                "C:\\",
@@ -26,7 +26,7 @@ class create_xl(QtGui.QMainWindow,imgtoxl.Ui_MainWindow):
 
         FilePath = FilePath.replace("/","\\")
         self.lineEdit.setText(FilePath)
-    def test1(self):
+    def SaveButton(self):
         global FilePath
         global FileName
         global FileDir
