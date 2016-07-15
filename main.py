@@ -26,7 +26,7 @@ class create_xl(QtGui.QMainWindow,imgtoxl.Ui_MainWindow):
 
         FilePath = FilePath.replace("/","\\")
         self.lineEdit.setText(FilePath)
-        print "test1"
+
     def SaveButton(self):
         global FilePath
         global FileName
